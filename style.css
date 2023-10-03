@@ -1,0 +1,330 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: grey;
+}
+
+body::before {
+    content: "";
+    width: 100%;
+    height: 368px;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgb(48, 47, 47);
+    box-shadow: 12px 12px 240px antiquewhite;
+}
+
+.page{
+    width: 763px;
+    margin: 0 auto;
+}
+
+
+
+/* ________________________________HEADER________________________________ */
+header{
+    width: 319px;
+    margin-top: 80px;
+}
+header h1{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: antiquewhite;
+    margin-bottom: 24px;
+}
+header p{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgb(236, 149, 77);
+}/* ___________________________________________________________________*/
+
+
+
+/* ________________________________FORM________________________________ */
+form{
+    background-color: antiquewhite;
+    margin-top: 38px;
+    margin-bottom: 38px;
+    min-height: 300px;
+    border-radius: 20px;
+    padding: 64px;
+}
+/* form:hover{
+    box-shadow: 2px 2px 20px  rgb(236, 149, 77);   
+    transform: scale(1.008);
+    transition:  0.2s;
+    -webkit-transform: scale(1.008);
+    -moz-transform: scale(1.008);
+    -ms-transform: scale(1.008);
+    -o-transform: scale(1.008);
+    -webkit-transition: transform 0.2s;
+    -moz-transition: transform 0.2s;
+    -ms-transition: transform 0.2s;
+    -o-transition: transform 0.2s;  
+} */
+/* ___________________________________________________________________*/
+
+
+
+/* ________________________________FIELDSET________________________________ */
+fieldset{
+    border: none;
+}
+.fieldset-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;   
+}
+fieldset legend{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 34px;
+    border-bottom: 1px solid rgb(139, 36, 36, 0.473);
+    width: 100%;
+    padding-bottom: 2px;
+}/* ___________________________________________________________________*/
+
+
+
+/* ________________________________Privacy________________________________ */
+.checkbox-wrapper {
+	display: flex; 
+    align-items: center;
+	position: relative;
+	text-align: left;
+	width: 47px;
+	height: 29px;
+	overflow: hidden;
+	box-shadow: inset 0 10px 25px rgba(139, 36, 36, 0.473);
+	border-radius: 20px;
+	margin: 5px;  
+}
+.checkbox-wrapper input {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0 0;
+	cursor: pointer;
+	opacity: 0;	
+}
+.checkbox-wrapper label {
+	margin: 2px;
+	background-color: rgba(139, 36, 36, 0.267);
+	border-radius: 50%;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	transition:  0.2s;
+	-webkit-transition:  0.2s;
+	-moz-transition:  0.2s;
+	-ms-transition:  0.2s;
+	-o-transition:  0.2s;
+} 
+.checkbox-wrapper input:checked + label{
+    display: inline-block;
+    margin-left: 20px;
+    background-color: rgb(236, 149, 77);
+    border: solid rgba(139, 36, 36, 0.473) 1px;
+}
+.checkbox-wrapper input:focus + label {
+    outline: 1px solid black;
+}
+
+.private-area{
+    display: grid;
+    gap: 24px;
+}
+
+/* ___________________________________________________________________*/
+
+
+
+/* ________________________________INPUT/TEXTAREA________________________________ */
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.input-wrapper  label,
+.checkbox-wrapper{
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+.input-wrapper  label span{
+    margin-left: 15px;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(139, 36, 36, 0.473);
+}
+.input-wrapper  label span:hover{
+    color: rgba(139, 36, 36, 0.808);
+}
+.input-wrapper input, .input-wrapper textarea, .input-wrapper select{
+    border: 1px solid rgba(139, 36, 36, 0.473);
+    background: none;
+    border-radius: 8px;
+    padding: 0 24px;
+    height: 56px;
+    line-height: 26px;
+}
+
+.input-wrapper textarea{
+    padding: 0;
+    height: 170px;
+}
+textarea, select{
+    resize: none; 
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 18px;
+}
+
+.input-wrapper select{
+    appearance: none;
+    -webkit-appearance: none;
+    
+    background-image:  url(./down.svg.svg);
+    background-repeat: no-repeat;
+    background-position: right 18px top 50%;
+    background-size: 18px;
+}/* ___________________________________________________________________*/
+
+
+
+/* ________________________________Day and hour________________________________ */
+.col-3{
+    display: flex;
+    gap: 24px;
+    
+}
+.col-3 > div:nth-child(1){
+    width: 100%;
+}
+#event-email{
+    width: 100%;
+}
+.event-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    font-size: 14px;
+    padding: 24px;
+}/* ___________________________________________________________________*/
+
+
+
+/* ________________________________input________________________________ */
+.save{
+    display: grid;
+    margin: 45px 175px;
+}
+
+input{
+    background:linear-gradient(to bottom, #ed7d28 5%, rgb(236, 149, 77) 100%);
+	border-radius:9px;
+	border:1px solid rgb(236, 149, 77);
+	cursor:pointer;
+	color:#000000;
+	font-family: 'Chakra Petch', sans-serif;
+	font-size: 24px;
+	padding:14px;
+	
+    
+}
+
+.save input:hover {
+    background:linear-gradient(to bottom, #f09e39 5%, rgb(236, 149, 77) 100%);
+    transform: scale(1.04);
+    transition:  0.2s;
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    -o-transform: scale(1.04);
+}
+input:active {
+	position:relative;
+	top:1px;
+}
+
+footer{
+    display: flex;
+    gap: 52px;
+    height: 136px;
+    background-color: rgb(48, 47, 47);
+    box-shadow: 12px 12px 240px black;
+    padding: 18px;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    color: antiquewhite;
+}
+
+footer > p:nth-child(2){
+    color: rgb(236, 149, 77);
+}
+
+/* input:invalid {
+    border:  1px solid red;
+} */
+
+
+/* ___________________________________________________________________*/
+
+
+
+/* ________________________________btn TOP________________________________ */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(48, 47, 47, 0.534);
+    border: solid 1px rgb(236, 149, 77);
+    text-decoration: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.btn::after {
+    content: "⇧";
+    
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(236, 149, 77);
+    transition: margin-top 250ms;
+}
+.btn:hover::after {
+    margin-top:-8px;
+}/* ___________________________________________________________________*/

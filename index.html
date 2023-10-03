@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Chakra+Petch&family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Crie seu evento</title>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Create and share your event.</h1>
+            <p>The first step is to fill out the registration form</p>
+            
+        </header>
+        <form> 
+            <fieldset>
+                    <legend>Privacy</legend>
+                    <div class="event-box">   
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" id="event-private" required />
+                                <label for="event-private"></label>           
+                            </div>
+                        <label for="event-01"> Event private </label>    
+                    </div>         
+                    <div class="private-area">
+                        <div class="input-wrapper">
+                            <label for="event-email"> Administrator email <span>(use a valid email)</span></label>
+                            <input type="email" id="event-email" required />
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="event-password"> Password for guests <span>(minimum 8 characters)</span></label>
+                            <input type="password" id="event-password" required minlength="8"/>
+                        </div>
+                    </div>
+            </fieldset>
+        </form> 
+        <form  id="form-submit">
+            <fieldset>
+                <div class="fieldset-wrapper">
+                    <legend>event information</legend>
+                    <div class="input-wrapper">
+                        <label for="event-title"> Event title <span>(minimum 8 characters)</span></label>
+                        <input type="text" id="event-title" name="title" required minlength="8" />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-link"> Event link <span>(start with https://)</span></label>
+                        <input type="url" id="event-link" required  />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-whatsapp"> Whatsapp <span>(only numbers)</span></label>
+                        <input type="number" maxlength="12" id="event-whatsapp" required />
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-info"> Extra information </label>
+                        <textarea id="event-info"></textarea>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-category">Category</label>
+                        <select id="event-category">
+                            <option value="00"></option>
+                            <option value="01">Option 01</option>
+                            <option value="02">Option 02</option>
+                            <option value="03">Option 03</option>
+                        </select>
+                    </div>
+                    
+                    <legend>Day and hour</legend>
+                    <div class="col-3">
+                        <div class="input-wrapper">
+                            <label for="event-date">Event day</label>
+                            <input type="date" id="event-date" required />
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="event-start">Of</label>
+                            <input type="time" id="event-start" required />
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="event-end">Until</label>
+                            <input type="time" id="event-end" required />
+                        </div>
+                    </div>
+                </div>
+            </fieldset> 
+        </form>
+        <div class="save">
+            <input            
+            type="submit"
+            form="form-submit"
+            value="save event"/>
+        </div>   
+    </div>   
+        <a href="#" class="btn"></a>
+    <footer class="">
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis culpa repudiandae tenetur eaque perspiciatis explicabo laudantium aspernatur sequi nulla deserunt maiores, obcaecati impedit. Deserunt aut quam ut. Nobis, animi accusantium.</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis culpa repudiandae tenetur eaque perspiciatis explicabo laudantium aspernatur sequi nulla deserunt maiores, obcaecati impedit. Deserunt aut quam ut. Nobis, animi accusantium.</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis culpa repudiandae tenetur eaque perspiciatis explicabo laudantium aspernatur sequi nulla deserunt maiores, obcaecati impedit. Deserunt aut quam ut. Nobis, animi accusantium.</p>
+    </footer>
+
+</body>
+<script src="script.js"></script>
+</html>
